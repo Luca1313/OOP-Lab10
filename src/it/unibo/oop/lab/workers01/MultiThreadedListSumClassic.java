@@ -65,6 +65,8 @@ public final class MultiThreadedListSumClassic implements SumList {
     @Override
     public long sum(final List<Integer> list) {
         final int size = list.size() % nthread + list.size() / nthread;
+        System.out.println("Modulo: " + list.size() % nthread
+                + " e divisione: " + list.size() / nthread);
         /*
          * Build a list of workers
          */
